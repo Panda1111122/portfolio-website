@@ -1,0 +1,124 @@
+.skills {
+    position: relative;
+    z-index: 2;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sectionTitle {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 8px;
+}
+
+.bentoGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bentoBox {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.boxHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.boxHeader h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.boxIcon {
+    color: var(--accent-secondary);
+}
+
+.iconWrapper {
+    background: rgba(255, 255, 255, 0.05);
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: var(--transition-smooth);
+}
+
+.tag:hover {
+    background: rgba(139, 92, 246, 0.15);
+    border-color: rgba(139, 92, 246, 0.3);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.boxTech {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.boxPro {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.boxSmall1,
+.boxSmall2 {
+    grid-column: span 2;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.boxSmall1 h3,
+.boxSmall2 h3 {
+    margin: 0 0 8px;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+}
+
+.boxSmall1 p,
+.boxSmall2 p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .bentoGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .boxTech,
+    .boxPro,
+    .boxSmall1,
+    .boxSmall2 {
+        grid-column: span 1;
+    }
+}
